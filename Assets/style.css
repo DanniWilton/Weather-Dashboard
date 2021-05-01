@@ -1,0 +1,76 @@
+header {
+    background-color: rgba(98, 151, 207, 0.5);
+    /* opacity: 0.5; */
+    color: black;
+    width: 100vw;
+    height: 60px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+body {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 200px 1fr 1fr 1fr 1fr 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(./weather/weather.png);
+}
+#search {
+    grid-column: 1/ 8;
+    grid-row: 2 / 8;
+}
+#currentCity {
+    grid-column: 2 / 8;
+    grid-row: 2 / 8;
+}
+#icon {
+    
+    grid-column: 3 / 8;
+    grid-row: 2 / 8;
+}
+#forecast {
+    font-size: 30px;
+    grid-column: 2 / 8;
+    grid-row: 4 / 8;
+}
+#day1 {
+    grid-column: 2 / 8;
+    grid-row: 5 /8;
+}
+#day2 {
+    grid-column: 3 / 8;
+    grid-row: 5 / 8;
+}
+#day3 {
+    grid-column: 4 / 8;
+    grid-row: 5 / 8;
+}
+#day4 {
+    grid-column: 5 / 8;
+    grid-row: 5 / 8;
+}
+#day5 {
+    grid-column: 6 / 8;
+    grid-row: 5 / 8;
+}
+h2 {
+    font-size: 35px;
+}
+button {
+    font-size: 35px;
+    border-radius: 0.5rem;
+    height: 45px;
+    float: left;
+}
+textarea {
+    border-radius: .5rem;
+    height: 40px;
+    margin-right: 10px;
+    float: left;
+    font-size: larger;
+    resize: none;
+}
