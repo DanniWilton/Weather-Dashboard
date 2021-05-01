@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./02-Homework/Assets/style.css">
+    <script src="https://kit.fontawesome.com/ad920f52d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>Weather Dashboard</header>
+
+    <div id='search'>
+    <h2>Search for a City</h2>
+    <textarea id='searchInput'></textarea><button id= 'searchButton' class="fas fa-search-location"></button>
+    </div>
+
+    <div id='currentCity'>
+        <h2 id= 'searchedCity'>Current City </h2>
+        <div>
+            <h2> <span></span><span id='currentDay'></span></h2>
+            <p id='currentTemp'>Temp:</p>
+            <p id='currentWind'>Wind:</p>
+            <p id='currentHumidity'>Humidity:</p>
+            <p id='currentUvIndex'>UV Index:</p>
+        </div>
+    </div>
+    <img src="" id='icon'>
+
+
+    <div id='forecast'>
+    <h3>5-Day Forecast:</h3>
+    </div>
+    <div id="day1">
+        <p class='date'>day 1 </p>
+        <p class='temp'>Temp: </p>
+        <p class='wind'>Wind: </p>
+        <p class='Humidity'>Humidity:</p>
+        <img src="" class='icon'>
+    </div>
+
+    <div id="day2">
+        <p class='date'>day 2 </p>
+        <p class='temp'>Temp:</p>
+        <p class='wind'>Wind:</p>
+        <p class='Humidity'>Humidity:</p>
+        <img src="" class='icon'>
+    </div>
+
+    <div id="day3">
+        <p class='date'>day 3 </p>
+        <p class='temp'>Temp:</p>
+        <p class='wind'>Wind:</p>
+        <p class='Humidity'>Humidity:</p>
+        <img src="" class='icon'>
+    </div>
+
+    <div id="day4">
+        <p class='date'>day 4 </p>
+        <p class='temp'>Temp:</p>
+        <p class='wind'>Wind:</p>
+        <p class='Humidity'>Humidity:</p>
+        <img src="" class='icon'>
+    </div>
+
+    <div id="day5">
+        <p class='date'>day 5 </p>
+        <p class='temp'>Temp:</p>
+        <p class='wind'>Wind:</p>
+        <p class='Humidity'>Humidity:</p>
+        <img src="" class='icon'>
+    </div>
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="02-Homework/Assets/script.js"></script>
+</html>
