@@ -1,12 +1,3 @@
-//API request from current weather API
-
-//saving to local storage 
-
-//display weather 
-
-// const currentWeatherAPI = `http://api.openweathermap.org/data/2.5/box/${city}?bbox=12,32,15,37,10&appid=${apiKey}`
-// const apiKey = "6c06f9f1820d7cce0add7c2c813d7985"
-
 currentDate = moment().format('dddd, MMMM Do YYYY');
 $("#currentDay").text(currentDate);
 
@@ -23,7 +14,6 @@ function clickEventFunction() {
   let city = search.value
   var searchedCity = document.getElementById ("searchedCity");
   searchedCity.textContent = city
-  console.log(city)
   getFetch(city)
   }
 
@@ -32,11 +22,9 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
   .then(function (response) {
     return response.json();})
   .then(function(data) {
-    console.log(data)
     weatherData = data
     var lat = data.coord.lat;
     var lon = data.coord.lon;
-    console.log(lat, lon)
     secondFetchCall(lat, lon)
   ;})
   .catch (error => console.log(error));}
@@ -46,7 +34,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
     .then(function(response) {
       return response.json();})
     .then(function(data) {
-      console.log(data)
       
       var currentTemp = data.current.temp;
       var currentTempElement = document.getElementById("currentTemp")
@@ -76,7 +63,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
         var tempElement = document.querySelector (`#day${i} .temp`)
         var windElement = document.querySelector (`#day${i} .wind`)
         var humidityElement = document.querySelector (`#day${i} .Humidity`)
-        console.log(tempElement)
         tempElement.textContent = `Temp: ${fiveDayForecastTemp} °C`
         windElement.textContent = `Wind: ${fiveDayForecastWind}`
         humidityElement.textContent = `Humidity: ${fiveDayForecastHumidity}`
@@ -98,7 +84,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
 
 
 
-  // icon.src = http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png
+
 
 // favourable/moderate/severe
 //icons 
